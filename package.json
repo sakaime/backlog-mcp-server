@@ -1,0 +1,20 @@
+{
+  "name": "backlog-mcp-server",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/bun": "latest"
+  },
+  "scripts": {
+    "build": "bun build src/server.ts --outdir build --target bun"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.10.1",
+    "arktype": "^2.1.20"
+  }
+}

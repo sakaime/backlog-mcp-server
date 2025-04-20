@@ -1,0 +1,13 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "typescript.preferences.autoImportSpecifierExcludeRegexes": ["^(node:)?os$"],
+  "files.associations": {
+    ".env.*": "properties"
+  }
+}
