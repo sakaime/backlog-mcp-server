@@ -7,14 +7,12 @@
     "@biomejs/biome": "1.9.4",
     "@types/bun": "latest"
   },
-  "scripts": {
-    "build": "bun build src/server.ts --outdir build --target bun"
-  },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.10.1",
-    "arktype": "^2.1.20"
+    "arktype": "^2.1.20",
+    "backlog-js": "^0.13.3"
   }
 }

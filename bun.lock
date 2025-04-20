@@ -6,6 +6,7 @@
       "dependencies": {
         "@modelcontextprotocol/sdk": "^1.10.1",
         "arktype": "^2.1.20",
+        "backlog-js": "^0.13.3",
       },
       "devDependencies": {
         "@biomejs/biome": "1.9.4",
@@ -48,6 +49,8 @@
     "accepts": ["accepts@2.0.0", "", { "dependencies": { "mime-types": "^3.0.0", "negotiator": "^1.0.0" } }, "sha512-5cvg6CtKwfgdmVqY1WIiXKc3Q1bkRqGLi+2W/6ao+6Y7gu/RCwRuAhGEzh5B4KlszSuTLgZYuqFqo5bImjNKng=="],
 
     "arktype": ["arktype@2.1.20", "", { "dependencies": { "@ark/schema": "0.46.0", "@ark/util": "0.46.0" } }, "sha512-IZCEEXaJ8g+Ijd59WtSYwtjnqXiwM8sWQ5EjGamcto7+HVN9eK0C4p0zDlCuAwWhpqr6fIBkxPuYDl4/Mcj/+Q=="],
+
+    "backlog-js": ["backlog-js@0.13.3", "", { "dependencies": { "qs": "^6.12.1" } }, "sha512-reOy9+OnwR0yF9TncBigiSPRPWb3iLfJWA5sU9lyFqzYhb7eG2WW/1bea8U4Wr7Lt9qVXbx9A1f45P6CpMEMxA=="],
 
     "body-parser": ["body-parser@2.2.0", "", { "dependencies": { "bytes": "^3.1.2", "content-type": "^1.0.5", "debug": "^4.4.0", "http-errors": "^2.0.0", "iconv-lite": "^0.6.3", "on-finished": "^2.4.1", "qs": "^6.14.0", "raw-body": "^3.0.0", "type-is": "^2.0.0" } }, "sha512-02qvAaxv8tp7fBa/mw1ga98OGm+eCbqzJOKoRt70sLmfEEi+jyBYVTDGfCL/k06/4EMk/z01gCe7HoCH/f2LTg=="],
 
