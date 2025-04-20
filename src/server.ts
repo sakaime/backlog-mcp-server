@@ -28,7 +28,13 @@ server.tool("fetch-projects", {}, async () => {
 
 server.tool(
   "fetch-issues",
-  { projectId: z.number().array().optional() },
+  {
+    projectId: z
+      .number()
+      .array()
+      .optional()
+      .describe("プロジェクトIDの配列 (例: [123, 456])"),
+  },
   async ({ projectId }) => {
     const issues = await backlog.getIssues({ projectId });
     return {
