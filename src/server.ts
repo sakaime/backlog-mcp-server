@@ -2,6 +2,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import * as backlogjs from "backlog-js";
 import { env } from "bun";
+import { z } from "zod";
 
 const backlog = new backlogjs.Backlog({
   host: env.BACKLOG_HOST,
@@ -14,7 +15,7 @@ const server = new McpServer({
 });
 
 server.tool("fetch-projects", {}, async () => {
-  const projects = backlog.getProjects();
+  const projects = await backlog.getProjects();
   return {
     content: [
       {
@@ -24,6 +25,22 @@ server.tool("fetch-projects", {}, async () => {
     ],
   };
 });
+
+server.tool(
+  "fetch-issues",
+  { projectId: z.number().array().optional() },
+  async ({ projectId }) => {
+    const issues = await backlog.getIssues({ projectId });
+    return {
+      content: [
+        {
+          type: "text",
+          text: JSON.stringify(issues),
+        },
+      ],
+    };
+  }
+);
 
 const transport = new StdioServerTransport();
 await server.connect(transport);

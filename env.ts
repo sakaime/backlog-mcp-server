@@ -1,14 +1,12 @@
-import { type } from "arktype";
+import { z } from "zod";
 
-const arkEnv = type({
-  BACKLOG_HOST: "string > 0",
-  BACKLOG_API_KEY: "string > 0",
+const zEnv = z.object({
+  BACKLOG_HOST: z.string().min(1),
+  BACKLOG_API_KEY: z.string().min(1),
 });
 
-const env = arkEnv.assert(Bun.env);
-
-type ArkType = typeof env;
+export const env = zEnv.parse(process.env);
 
 declare module "bun" {
-  interface Env extends ArkType {}
+  interface Env extends z.infer<typeof zEnv> {}
 }

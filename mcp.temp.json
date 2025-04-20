@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "backlog": {
+      "command": "bun",
+      "args": [
+        "/path/to/backlog-mcp-server/src/server.ts"
+      ],
+      "env": {
+        "BACKLOG_HOST": "<BACKLOG_SPACE_ID>.backlog.com",
+        "BACKLOG_API_KEY": "xxx"
+      }
+    }
+  }
+}
